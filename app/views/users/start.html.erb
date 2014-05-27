@@ -1,1 +1,16 @@
 <h1>Start</h1>
+
+
+
+<%= form_tag('/list', method: 'get') do%>
+
+<%= label_tag 'genre', 'Choose your Weapon' %>
+<%= select_tag 'genre', options_for_select(@question_1_answers) %>
+
+<%= label_tag 'platform', 'Choose your System' %>
+<%= select_tag 'platform', options_for_select(@question_2_answers) %>
+
+
+<%= submit_tag("Go go go") %>
+
+<% end %>

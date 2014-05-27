@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/start' => 'users#start'
   get '/signup' => 'users#new'
   get '/signin' => 'sessions#new'
+  get '/list' => 'users#list'
   delete '/signout' => 'sessions#destroy'
 
   # Example of regular route:

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :require_signin, except: [:index, :new, :create]
   before_action :find_user, only: [:show, :edit, :update, :destroy]
-  before_action :require_current_user, except: [:index, :start, :new, :create]
+  before_action :require_current_user, except: [:index, :list, :start, :new, :create]
 
 
   def index
@@ -28,6 +28,18 @@ class UsersController < ApplicationController
   end
 
   def start
+    @question_1_answers = [["Sword", "action"], ["Wand", "adventure"], ["Pickaxe", "simulation"], ["Your Mind", "strategy"], ["All I need is a Gas Pedal", "racing"]]
+    @question_2_answers = [['Show me EVERYTHING!', 'all'], ['Nintento DS', 'ds'], ["Nintendo GameCube", 'gc'], ["PC", 'pc'], ["PS2", 'ps2'], ["PS3", 'ps3'], ["PSP", 'psp'], ["Nintendo Wii", 'wii'], ["XBox", 'xbox'],
+      ["XBox 360", 'xbox360'], ["Sega DreamCast", 'dc'], ["Gameboy", 'gameboy'], ["Gameboy Advanced", 'gba'], ["Sega Genesis", 'genesis'], ["Nintendo 64", 'n64'], ["NES", 'nes'], ["PS1", 'ps1'], ["Sega Saturn", 'saturn'],
+      ["Super Nintendo", 'snes']]
+  end
+
+
+  def list
+    # binding.pry
+    list = HTTParty.get("http://api.gamesradar.com/games?genre=#{params[:genre]}&platform=#{params[:platform]}&sort=newest&api_key=579bd0ebcda04f60b4eceffafea3f915")
+    @games_list = list["games"]["game"]
+    # binding.pry
   end
 
 
