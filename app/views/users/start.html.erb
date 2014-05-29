@@ -7,11 +7,15 @@
 <%= form_tag('/list', method: 'get') do%>
 
 <%= label_tag 'genre', 'What Piques Your Interest?', class: 'label' %><br>
-<%= select_tag 'genre', options_for_select(@question_1_answers) %>
-<br>
-<%= label_tag 'platform', 'Choose your System', class: 'label' %><br>
-<%= select_tag 'platform', options_for_select(@question_2_answers) %>
+<%= select_tag 'genre', options_for_select(@question_1_answers), class: 'answer' %>
 
+<br>
+<%= label_tag 'platform', 'Choose your System:', class: 'label' %><br>
+<%= select_tag 'platform', options_for_select(@question_2_answers), class: 'answer' %>
+
+<br>
+<%= label_tag 'sort', 'Choose your Order:', class: 'label' %><br>
+<%= select_tag 'sort', options_for_select(@question_3_answers), class: 'answer' %>
 <br>
 <%= submit_tag "Go", class: 'go' %>
 

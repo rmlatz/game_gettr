@@ -34,11 +34,12 @@ class UsersController < ApplicationController
     @question_2_answers = [['Show me EVERYTHING!', 'all'], ['Nintento DS', 'ds'], ["Nintendo GameCube", 'gc'], ["PC", 'pc'], ["PS2", 'ps2'], ["PS3", 'ps3'], ["PSP", 'psp'], ["Nintendo Wii", 'wii'], ["XBox", 'xbox'],
       ["XBox 360", 'xbox360'], ["Sega DreamCast", 'dc'], ["Gameboy", 'gameboy'], ["Gameboy Advanced", 'gba'], ["Sega Genesis", 'genesis'], ["Nintendo 64", 'n64'], ["NES", 'nes'], ["PS1", 'ps1'], ["Sega Saturn", 'saturn'],
       ["Super Nintendo", 'snes']]
+    @question_3_answers = [["New is Better", 'newest'],["Classics First", 'oldest'],["A-Z", 'a-z'],["Z-A", 'z-a']]
   end
 
 
   def list
-    list = HTTParty.get("http://api.gamesradar.com/games?genre=#{params[:genre]}&platform=#{params[:platform]}&sort=newest&api_key=#{ENV['game_radar_api_key']}&page_size=30")
+    list = HTTParty.get("http://api.gamesradar.com/games?genre=#{params[:genre]}&platform=#{params[:platform]}&sort=#{params[:sort]}&api_key=#{ENV['game_radar_api_key']}&page_size=50")
     @games_list = list["games"]["game"]
 
     if @games_list.blank?
