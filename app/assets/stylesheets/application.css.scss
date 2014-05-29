@@ -19,7 +19,7 @@
 }
 
 body {
-  background: url('<%= image_path("si_background.png")%>');
+  background-image: asset-url("si_background.png", image);
   background-size: cover;
   clear: both;
   font-family: 'Press Start 2P', Montserrat;
