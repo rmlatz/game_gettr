@@ -1,5 +1,10 @@
 <h1><%= @title.gsub("+", " ") %> </h1>
-<img src="<%= @image %>">
+
+
+<%= link_to(@youtube+@title) do %>
+  <img src="<%= @image %>">
+<% end %>
+
 <p><%= @deck %></p>
 
 

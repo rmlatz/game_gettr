@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
 
   def game
+    @youtube = "https://www.youtube.com/results?search_query="
     get_game_data(params[:title])
     @is_saved = current_user.games.find_by(title: @title)
   end
