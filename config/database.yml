@@ -81,5 +81,4 @@ test:
 production:
   <<: *default
   database: GameGetter_production
-  username: GameGetter
   password: <%= ENV['GAMEGETTER_DATABASE_PASSWORD'] %>
