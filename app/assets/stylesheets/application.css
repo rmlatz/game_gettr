@@ -13,3 +13,82 @@
  *= require_tree .
  *= require_self
  */
+
+ a {
+  color: #D3D3D3;
+}
+
+body {
+  background-image: url("si_background.png");
+  background-size: cover;
+  clear: both;
+  font-family: 'Press Start 2P', Montserrat;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.center {
+  background-color: rgba(12, 59, 45, .6);
+  border: 10px solid rgba(128, 128, 128, .6);
+  border-radius: 15px;
+  color: #fff;
+  margin: 0 auto;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  padding: 35px;
+  text-align: center;
+  width: 55%;
+}
+
+.center img {
+  border: 5px solid rgba(128, 128, 128, .6);
+  width: 85%;
+}
+
+.footer {
+  background-color: rgba(12, 59, 45, .6);
+  border-top: 5px solid rgba(128, 128, 128, .6);
+  color: #fff;
+  margin: 0 auto;
+  padding: 10px;
+  width: 100%;
+}
+
+.header {
+  background-color: rgba(12, 59, 45, .6);
+  border-bottom: 5px solid rgba(128, 128, 128, .6);
+  color: #fff;
+  margin: 0 auto;
+  padding: 10px;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+  padding-top: 15px;
+}
+
+.label {
+  line-height: 45px;
+}
+
+.go {
+  border: 4px solid #000;
+  border-radius: 50%;
+  color: #fff;
+  font-family: 'Press Start 2P', Montserrat;
+  background-image: -webkit-linear-gradient(right, #D1FFDF 0%, #2EE726 100%);
+  height: 40px;
+  margin-top: 8px;
+}
+
+.button {
+  border: 4px solid #000;
+  border-radius: 50%;
+  color: #fff;
+  font-family: 'Press Start 2P', Montserrat;
+  background-image: -webkit-linear-gradient(right, #FFFFFF 0%, #DF0101 100%);
+  height: 40px;
+  margin-top: 8px;
+
+}

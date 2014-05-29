@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
   has_many :additions, dependent: :destroy
   has_many :games, through: :additions
 
-  # It validates the email field.
+  # It validates the email field for presence and uniqueness.
+  validates_uniqueness_of :email
   validates :email,
     presence: true,
     uniqueness: { case_sensitive: false },

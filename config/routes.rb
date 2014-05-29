@@ -6,9 +6,11 @@ Rails.application.routes.draw do
   root 'users#index'
 
   resources :users, except: [:index, :new]
-
   resources :sessions, only: [:create]
+  resources :games, only: [:create, :destroy]
 
+  get '/game' => 'games#game'
+  get '/games/list' => 'games#list'
   get '/start' => 'users#start'
   get '/signup' => 'users#new'
   get '/signin' => 'sessions#new'

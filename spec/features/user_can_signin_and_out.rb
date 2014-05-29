@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-
 describe "User can sign in and sign out" do
   let(:user) { User.create(email: "rmlatz@gmail.com", password: "password") }
 
@@ -18,10 +17,7 @@ describe "User can sign in and sign out" do
     fill_in "Password", with: user.password
     click_button "Sign in"
     click_button "signout"
-    expect(page).to have_content("This is the HomePage")
+    expect(page).to have_content("Welcome New Player!")
   end
-
-
-
 
 end

@@ -1,0 +1,27 @@
+<h1><%= @title.gsub("+", " ") %> </h1>
+<img src="<%= @image %>">
+<p><%= @deck %></p>
+
+
+<% if @is_saved == nil %>
+
+  <%= form_tag games_path do %>
+
+    <%= hidden_field :game, :title, :value => @title %>
+    <%= submit_tag "Add This Game to Your List" %>
+
+  <% end %>
+
+<% else %>
+
+ <%= form_tag game_path(@is_saved.id), method: 'delete' do %>
+
+    <%= hidden_field :game, :id, :value => @is_saved.id %>
+    <%= submit_tag "REMOVE" %>
+
+  <% end %>
+
+
+<% end %>
+
+

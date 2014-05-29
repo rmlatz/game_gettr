@@ -1,16 +1,18 @@
 <h1>Start</h1>
 
-
+<% flash.each do |name, msg| %>
+<%= content_tag :p, msg, class: name %>
+<% end %>
 
 <%= form_tag('/list', method: 'get') do%>
 
-<%= label_tag 'genre', 'Choose your Weapon' %>
+<%= label_tag 'genre', 'What Piques Your Interest?', class: 'label' %><br>
 <%= select_tag 'genre', options_for_select(@question_1_answers) %>
-
-<%= label_tag 'platform', 'Choose your System' %>
+<br>
+<%= label_tag 'platform', 'Choose your System', class: 'label' %><br>
 <%= select_tag 'platform', options_for_select(@question_2_answers) %>
 
-
-<%= submit_tag("Go go go") %>
+<br>
+<%= submit_tag "Go", class: 'go' %>
 
 <% end %>

@@ -1,8 +1,8 @@
 <% if signed_in? %>
 
   <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
-    Signed in as <%= link_to current_user.email, current_user %>
-    <%= f.submit "Sign out", id: 'signout' %>
+    Player 1 - <%= link_to current_user.email, current_user %>
+    <%= f.submit "Quit?", :class => "button", id: 'signout' %>
   <% end %>
 
 
