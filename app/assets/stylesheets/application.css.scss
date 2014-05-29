@@ -20,8 +20,7 @@
 
 body {
   background-image: asset-url("si_background.png", image);
-  background-size: cover;
-  clear: both;
+  background-size: contain;
   font-family: 'Press Start 2P', Montserrat;
   margin: 0 auto;
   text-align: center;
@@ -32,40 +31,42 @@ body {
   border: 10px solid rgba(128, 128, 128, .6);
   border-radius: 15px;
   color: #fff;
-  margin: 0 auto;
-  margin-bottom: 10%;
-  margin-top: 10%;
+  height: 85%;
+  margin: 10% auto 10% auto;
   padding: 35px;
   text-align: center;
   width: 55%;
-}
 
-.center img {
-  border: 5px solid rgba(128, 128, 128, .6);
-  width: 85%;
+    img {
+      border: 5px solid rgba(128, 128, 128, .6);
+      width: 85%;
+    }
 }
 
 .footer {
   background-color: rgba(12, 59, 45, .6);
-  border-top: 5px solid rgba(128, 128, 128, .6);
+  border-top: 5px solid rgba(128, 128, 128, .8);
+  bottom: 0;
   color: #fff;
-  margin: 0 auto;
   padding: 10px;
+  position: fixed;
   width: 100%;
 }
 
 .header {
   background-color: rgba(12, 59, 45, .6);
-  border-bottom: 5px solid rgba(128, 128, 128, .6);
+  border-bottom: 5px solid rgba(128, 128, 128, .8);
   color: #fff;
   margin: 0 auto;
-  padding: 10px;
+  position: fixed;
+  top: 0;
   width: 100%;
 }
 
 li {
   list-style: none;
   padding-top: 15px;
+  line-height: 45px;
 }
 
 .label {
@@ -77,9 +78,17 @@ li {
   border-radius: 50%;
   color: #fff;
   font-family: 'Press Start 2P', Montserrat;
-  background-image: -webkit-linear-gradient(right, #D1FFDF 0%, #2EE726 100%);
+  background: #b4e391; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#b4e391), color-stop(50%,#61c419), color-stop(100%,#b4e391)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #b4e391 0%,#61c419 50%,#b4e391 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #b4e391 0%,#61c419 50%,#b4e391 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #b4e391 0%,#61c419 50%,#b4e391 100%); /* IE10+ */
+  background: linear-gradient(135deg, #b4e391 0%,#61c419 50%,#b4e391 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   height: 40px;
   margin-top: 8px;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
 }
 
 .button {
@@ -87,8 +96,20 @@ li {
   border-radius: 50%;
   color: #fff;
   font-family: 'Press Start 2P', Montserrat;
-  background-image: -webkit-linear-gradient(right, #FFFFFF 0%, #DF0101 100%);
+  background: #ff3019; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #ff3019 0%, #cf0404 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #ff3019 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #ff3019 0%,#cf0404 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #ff3019 0%,#cf0404 100%); /* IE10+ */
+  background: linear-gradient(135deg, #ff3019 0%,#cf0404 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   height: 40px;
   margin-top: 8px;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
 
+}
+
+html {
+  position: relative;
 }
