@@ -35,4 +35,4 @@ A full list of user stories can be found by looking at [this Pivotal Tracker Pro
 
 ##ERD
 
-!https://github.com/rmlatz/game_gettr/tree/master/public/ERD.png
+![alt text](https://github.com/rmlatz/game_gettr/tree/master/public/ERD.png)
