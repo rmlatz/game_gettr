@@ -51,4 +51,5 @@ group :development, :test do
   gem 'launchy'
   gem 'factory_girl_rails'
   gem 'ffaker'
+  gem 'simplecov', '~> 0.8.2'
 end
