@@ -33,6 +33,7 @@ GA WDI DC April 2014, Project 1
 
 A full list of user stories can be found by looking at [this Pivotal Tracker Project](https://www.pivotaltracker.com/s/projects/1086728)
 
-##ERD
+##Visuals
 
-![alt text](https://github.com/rmlatz/game_gettr/tree/master/public/ERD.png)
+[Link to ERD](https://github.com/rmlatz/game_gettr/tree/master/public/ERD.png)
+[Link to Wireframe](https://www.gliffy.com/go/html5/5807290?app=1b5094b0-6042-11e2-bcfd-0800200c9a66)
