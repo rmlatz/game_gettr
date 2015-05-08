@@ -1,0 +1,10 @@
+%h1 Check'm Out
+- if @games_list.class == Array
+	%ul
+		- @games_list.each do |game|
+			%li 
+				= link_to game["name"]["us"], '/game' + "?title=" + URI.encode(game["name"]["us"]), id: 'game_link'
+- else
+	%ul
+		%li 
+			= link_to @games_list["name"]["us"], '/game' + "?title=" + URI.encode(@games_list["name"]["us"]), id: 'game_link'

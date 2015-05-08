@@ -1,0 +1,15 @@
+!!! 5
+%html
+  %head
+    %title GameGettr
+    %link{:rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Press+Start+2P"}
+    = stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  %body
+    .header 
+      = render 'common/signout'
+    .center
+      = yield
+    - if signed_in? 
+      .footer
+        = render 'common/nav'

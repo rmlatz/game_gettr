@@ -1,0 +1,32 @@
+%h1 
+	= @title.gsub("+", " ")
+=link_to(@youtube+@title) do
+	= image_tag @image
+
+%p
+	= @deck
+
+- if @is_saved.nil?
+	= form_tag games_path do
+		= hidden_field :game, :title, :value => @title
+		= submit_tag "Add", class: 'go'
+- else
+	= form_tag game_path(@is_saved.id), method: 'delete' do
+		= hidden_field :game, :id, :value => @is_saved.id
+		= submit_tag "REMOVE", class: 'button'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

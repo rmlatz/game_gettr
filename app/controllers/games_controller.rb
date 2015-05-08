@@ -9,7 +9,7 @@ class GamesController < ApplicationController
   def create
     title = params[:game][:title]
     if game = Game.find_or_create_by(title: title)
-      current_user.games << game
+      Addition.create(user_id: current_user.id, game_id: game.id)
       redirect_to games_list_path
     else
       redirect_to '/game?title=' + "#{title}"
