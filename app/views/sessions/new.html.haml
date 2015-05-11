@@ -3,9 +3,7 @@
 - flash.each do |name, msg|
 	= content_tag(:p, msg, class: name)
 
-= form_for :session, url: sessions_path do |f|
-	= f.label :email, "Email:"
-	= f.email_field :email
-	= f.label :password, "Password:"
-	= f.password_field :password
-	= f.submit "Go", id: 'signin', class: 'go'
+= simple_form_for :session, url: sessions_path do |f|
+	= f.input :email
+	= f.input :password
+	= f.button :submit, "Go", id: 'signin', class: 'go'

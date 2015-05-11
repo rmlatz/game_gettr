@@ -13,6 +13,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+#gem simple_form to replace hand rolled forms
+gem 'simple_form'
 #gem haml to use HAML in place of ERC
 gem 'haml'
 # Use figaro to hide ENV variables

@@ -1,7 +1,7 @@
 - if signed_in?
-	= form_for :session, url: signout_path, method: 'delete' do |f|
+	= simple_form_for :session, url: signout_path, method: 'delete' do |f|
 		Player 1 - 
 		= current_user.email
-		= f.submit "Quit?!?", :class => 'button', id: 'signout'
+		= f.button :submit, "Quit?!?", :class => 'button', id: 'signout'
 - else
 	= get_quote.sample

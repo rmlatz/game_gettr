@@ -6,11 +6,8 @@
       %li
         = msg
 <!-- If the user accessed this page directly, or without an errors, display the form to get data -->
-= form_for @user do |f|
-  = f.label :email
-  = f.email_field :email
-  = f.label :password
-  = f.password_field :password
-  = f.label :password_confirmation, 'Confirm Password'
-  = f.password_field :password_confirmation
-  = f.submit "Go", id: "submit", class: "go"
+= simple_form_for @user do |f|
+  = f.input :email, label: "Please enter your email:   ", required: true
+  = f.input :password, label: "Please enter your password:   ", required: true
+  = f.input :password_confirmation, label: "Confirm password:   ", required: true
+  = f.button :submit, "Go", id: "submit", class: "go"
