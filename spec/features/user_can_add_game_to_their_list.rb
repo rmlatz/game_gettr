@@ -9,15 +9,16 @@ describe "User can save a game to their list" do
     select('Show me EVERYTHING!', :from => 'platform')
     click_button("Go")
     first(:link, "game_link").click
-    click_button("Add This Game to Your List")
-    expect(page).to have_content("Farming Simulator 14")
+    title = find("//h1").text
+    click_button("Add")
+    expect(page).to have_content(title)
   end
 
   def login(user)
     visit "/signin"
     fill_in "Email", with: user.email
     fill_in "Password", with: user.password
-    click_button "Sign in"
+    click_button "Go"
   end
 
 end

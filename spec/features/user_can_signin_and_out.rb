@@ -7,7 +7,7 @@ describe "User can sign in and sign out" do
     visit signin_path
     fill_in "Email", with: user.email
     fill_in "Password", with: user.password
-    click_button "Sign in"
+    click_button "Go"
     expect(page).to have_content("Start")
   end
 
@@ -15,7 +15,7 @@ describe "User can sign in and sign out" do
     visit signin_path
     fill_in "Email", with: user.email
     fill_in "Password", with: user.password
-    click_button "Sign in"
+    click_button "Go"
     click_button "signout"
     expect(page).to have_content("Welcome New Player!")
   end

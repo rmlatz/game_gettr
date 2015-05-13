@@ -9,14 +9,14 @@ describe "User can select a game from the list page and see more details" do
     select('Show me EVERYTHING!', :from => 'platform')
     click_button("Go")
     first(:link, "game_link").click
-    expect(page).to have_content("Farming Simulator 14")
+    expect(page).to have_selector("input[id='game_title']")
   end
 
   def login(user)
-    visit "/signin"
-    fill_in "Email", with: user.email
-    fill_in "Password", with: user.password
-    click_button "Sign in"
+    visit signin_path
+    find('#session_email').set(user.email)
+    find('#session_password').set(user.password)
+    click_button "Go"
   end
 
 end

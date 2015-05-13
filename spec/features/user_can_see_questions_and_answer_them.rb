@@ -17,10 +17,10 @@ describe "User can see questions and answer them" do
   end
 
   def login(user)
-    visit "/signin"
-    fill_in "Email", with: user.email
-    fill_in "Password", with: user.password
-    click_button "Sign in"
+    visit signin_path
+    find('#session_email').set(user.email)
+    find('#session_password').set(user.password)
+    click_button "Go"
   end
 
 end

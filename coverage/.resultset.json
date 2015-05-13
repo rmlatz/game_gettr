@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Randy/dev/GameGetter/app/models/game.rb": [
+      "/Users/randylatz/test/game_gettr/app/models/game.rb": [
         1,
         1,
         1,
@@ -10,7 +10,7 @@
         null,
         null
       ],
-      "/Users/Randy/dev/GameGetter/spec/models/user_spec.rb": [
+      "/Users/randylatz/test/game_gettr/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -19,7 +19,7 @@
         2,
         null
       ],
-      "/Users/Randy/dev/GameGetter/app/models/user.rb": [
+      "/Users/randylatz/test/game_gettr/app/models/user.rb": [
         1,
         null,
         1,
@@ -67,6 +67,6 @@
         null
       ]
     },
-    "timestamp": 1401406349
+    "timestamp": 1431543013
   }
 }

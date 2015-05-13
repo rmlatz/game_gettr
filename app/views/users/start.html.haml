@@ -3,7 +3,7 @@
 	= content_tag :p, msg, class: name
 
 = form_tag("/list", method: 'get') do
-	= label_tag 'genre', "What piques Your Interest?", class: 'label'
+	= label_tag 'genre', "What Piques Your Interest?", class: 'label'
 	= select_tag 'genre', options_for_select(@question_1_answers, selected: @question_1_answers[1]), class: 'answer'
 	= label_tag 'platform', "Choose your System:", class: 'label'
 	= select_tag 'platform', options_for_select(@question_2_answers), class: 'answer'
